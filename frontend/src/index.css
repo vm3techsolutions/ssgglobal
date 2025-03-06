@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import "@fontsource/playfair-display"; /* Heading Font */
+@import "@fontsource/lato"; /* Body Text Font */
+
+ 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+
+p, li, a{
+  font-family: "Lato", sans-serif !important;
+}
+.primaryBg{
+  background-color: #800080;
+}
+
+.primaryColor{
+  color: #800080 !important;
+}
+
+a{
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+.primary-btn{
+    border-radius: 40px;
+    border: solid 2px #800080;
+    color: #fff;
+    background-color: #800080;
+    
+}
+.primary-btn:hover {
+  background-color: orange;
+  border: 1px #ffa500;
+}
+
+input
+{
+  background-color: white;
+  
+}
+
+.Blog
+{
+  float: right;
+}
+
+/* Style for carousel control arrows */
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.carousel-control-prev{
+  transform: translateX(-40%); 
+}
+
+.carousel-control-next{
+  transform: translateX(40%); 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #D4AF37; /* Set a background color for the arrows */
+  border-radius: 50%; /* Circular background for the arrows */
+  padding: 10px; /* Adjust the size of the arrow */
+  width: 1rem;
+  height: 1rem;
+  
+}
+
+/* Right-align the Read More button */
+.read-more-btn {
+  margin-top: auto;
+  float: right;
+}
+
+/* Ensure equal height for all cards */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card .card-body {
+ flex-grow: 1;
+}
+
+#Text
+{
+  font-size: 30px !important;
+}
+
+
+.headercolor:hover{
+  color: #800080 !important;
+}
+
+.TableText
+{
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.Border
+{
+  border-bottom: rgb(225, 221, 221) solid;
+ }
+
+ .Banner
+ {
+  height: 490px;
+  max-width: 100%;
+  background-size: cover;
+ }
+
+ .BorderColor
+ {
+  border-color: #800080 !important;
+ }
+
+ table
+ {
+  width: 120vh;
+ }
+
+ .Donatebtn
+ {
+  background-color: #800080 !important;
+ }
+
+ .Donatebtn:hover
+ {
+  background-color: orange !important;
+ }
+
+ .Border1
+ {
+  border: #800080 !important;  
+ }
+
+ .Border2
+ {  
+  border-right: #800080 !important;
+  border-left: #800080 !important;
+ }
+
+ /* .Border3
+ {  
+  border-right: 1px white !important;
+ } */
+
+ .Border4
+ {  
+  
+  border-left: 1px white !important;
+ }
+
+ .DonateText
+ {
+  font-size: 50px;
+ }
+ 
+ 
+
