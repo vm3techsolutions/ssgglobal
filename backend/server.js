@@ -74,15 +74,19 @@ app.post("/submit-form", async (req, res) => {
     return res.status(400).json({ error: "All required fields must be filled" });
   }
 
+  // Get the current date and time in the desired format
+  const currentDate = new Date();
+  const formattedDate = formatDateToAMPM(currentDate);
+
   try {
     const authClient = await getAuthClient();
     await sheets.spreadsheets.values.append({
       auth: authClient,
       spreadsheetId: SPREADSHEET_ID,
-      range: "Sheet1!A:F",
+      range: "Sheet1!A:G",
       valueInputOption: "RAW",
       resource: {
-        values: [[fullname, phone, email, preferredDate, address, message || ""]],
+        values: [[fullname, phone, email, preferredDate, address, message, formattedDate || ""]],
       },
     });
     
