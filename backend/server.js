@@ -1,17 +1,10 @@
-import dotenv from "dotenv";
-import express from "express";
-import Stripe from "stripe";
-import cors from "cors";
-import { google } from "googleapis";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-dotenv.config();
-
-// Convert __dirname for ES Modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+require("dotenv").config();
+const express = require("express");
+const Stripe = require("stripe");
+const cors = require("cors");
+const { google } = require("googleapis");
+const fs = require("fs");
+const path = require("path");
 
 // Load Google API credentials
 const credentialsPath = path.join(__dirname, "ssssg-formsubmission.json");
@@ -66,25 +59,20 @@ app.post("/create-payment-intent", async (req, res) => {
   }
 });
 
-// / Function to format date & time in AM/PM format
-// Function to format the date in the desired format (DD/MM/YYYY hh:mm:ss AM/PM)
+// Function to format date & time in AM/PM format
 function formatDateToAMPM(date) {
   const options = {
-    timeZone: 'Asia/Kolkata',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
     hour12: true,
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
   };
-  const formattedDate = new Intl.DateTimeFormat('en-IN', options).format(date);
-
-  const [datePart, timePart] = formattedDate.split(', ');
-  return `${datePart} ${timePart}`;
+  return new Intl.DateTimeFormat("en-IN", options).format(date);
 }
-
 
 // Google Sheets Form Submission Route
 app.post("/submit-form", async (req, res) => {
@@ -109,7 +97,7 @@ app.post("/submit-form", async (req, res) => {
         values: [[fullname, phone, email, preferredDate, address, message, formattedDate]],
       },
     });
-    
+
     console.log("Form submitted successfully:", req.body);
     res.status(200).json({ message: "Form submitted successfully and added to Google Sheets!" });
   } catch (error) {
