@@ -3,19 +3,25 @@ import express from "express";
 import Stripe from "stripe";
 import cors from "cors";
 import { google } from "googleapis";
-import fs from "fs"; // Required for reading JSON files
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
 dotenv.config();
 
-// Fix: Convert __dirname for ES Modules
+// Convert __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Fix: Import JSON file correctly
+// Load Google API credentials
 const credentialsPath = path.join(__dirname, "ssssg-formsubmission.json");
-const credentials = JSON.parse(fs.readFileSync(credentialsPath, "utf-8"));
+let credentials;
+try {
+  credentials = JSON.parse(fs.readFileSync(credentialsPath, "utf-8"));
+} catch (error) {
+  console.error("Error reading Google API credentials:", error.message);
+  process.exit(1);
+}
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const app = express();
@@ -27,15 +33,12 @@ app.use(cors());
 const sheets = google.sheets("v4");
 const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
 
-// Google API Authentication
 const auth = new google.auth.GoogleAuth({
   credentials,
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
-const getAuthClient = async () => {
-  return await auth.getClient();
-};
+const getAuthClient = async () => await auth.getClient();
 
 // Payment Intent Route
 app.post("/create-payment-intent", async (req, res) => {
@@ -46,8 +49,7 @@ app.post("/create-payment-intent", async (req, res) => {
       return res.status(400).json({ error: "Invalid payment amount" });
     }
 
-    console.log("Received Payment Request:", req.body);
-
+    console.log("Processing Payment:", req.body);
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
       currency: "usd",
@@ -56,43 +58,42 @@ app.post("/create-payment-intent", async (req, res) => {
       metadata: { fullName, address, country },
     });
 
-    console.log("Payment Intent Created:", paymentIntent);
-
+    console.log("Payment Intent Created:", paymentIntent.id);
     res.json({ clientSecret: paymentIntent.client_secret });
   } catch (error) {
-    console.error("Payment Intent Error:", error.message);
-    res.status(400).json({ error: error.message });
+    console.error("Stripe Payment Error:", error);
+    res.status(500).json({ error: "Payment processing failed" });
   }
 });
 
 // Google Sheets Form Submission Route
 app.post("/submit-form", async (req, res) => {
   const { fullname, phone, email, preferredDate, address, message } = req.body;
-  
+
   if (!fullname || !phone || !email || !preferredDate || !address) {
-    return res.status(400).json({ error: "All fields are required" });
+    return res.status(400).json({ error: "All required fields must be filled" });
   }
 
   try {
     const authClient = await getAuthClient();
-
     await sheets.spreadsheets.values.append({
       auth: authClient,
       spreadsheetId: SPREADSHEET_ID,
       range: "Sheet1!A:F",
       valueInputOption: "RAW",
       resource: {
-        values: [[fullname, phone, email, preferredDate, address, message]],
+        values: [[fullname, phone, email, preferredDate, address, message || ""]],
       },
     });
-
+    
+    console.log("Form submitted successfully:", req.body);
     res.status(200).json({ message: "Form submitted successfully and added to Google Sheets!" });
   } catch (error) {
-    console.error("Form Submission Error:", error.message);
+    console.error("Google Sheets Submission Error:", error);
     res.status(500).json({ error: "Failed to submit form" });
   }
 });
 
 // Start Express Server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
