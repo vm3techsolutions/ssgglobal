@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 import express from "express";
 import Stripe from "stripe";
 import cors from "cors";
-import axios from "axios";
 import { google } from "googleapis";
 import fs from "fs"; // Required for reading JSON files
 import path from "path";
