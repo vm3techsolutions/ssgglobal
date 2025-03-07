@@ -66,6 +66,26 @@ app.post("/create-payment-intent", async (req, res) => {
   }
 });
 
+// / Function to format date & time in AM/PM format
+// Function to format the date in the desired format (DD/MM/YYYY hh:mm:ss AM/PM)
+function formatDateToAMPM(date) {
+  const options = {
+    timeZone: 'Asia/Kolkata',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  };
+  const formattedDate = new Intl.DateTimeFormat('en-IN', options).format(date);
+
+  const [datePart, timePart] = formattedDate.split(', ');
+  return `${datePart} ${timePart}`;
+}
+
+
 // Google Sheets Form Submission Route
 app.post("/submit-form", async (req, res) => {
   const { fullname, phone, email, preferredDate, address, message } = req.body;
@@ -86,7 +106,7 @@ app.post("/submit-form", async (req, res) => {
       range: "Sheet1!A:G",
       valueInputOption: "RAW",
       resource: {
-        values: [[fullname, phone, email, preferredDate, address, message, formattedDate || ""]],
+        values: [[fullname, phone, email, preferredDate, address, message, formattedDate]],
       },
     });
     
