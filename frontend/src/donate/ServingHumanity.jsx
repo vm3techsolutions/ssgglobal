@@ -16,9 +16,10 @@ const About_Us = () => {
       <div className="overflow-x-auto flex justify-center">
   <table className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-2xl text-left text-sm sm:text-base">
     <thead>
-      <tr className="text-white bg-gradient-to-r from-[#800080] via-[#ad06ad] to-[#800080]">
-        <th className="py-3 px-4 sm:px-6 text-left font-semibold w-1/2 border-1 BorderColor">Field</th>
-        <th className="py-3 px-4 sm:px-6 text-left font-semibold w-1/2 border-1 BorderColor">Details</th>
+      <tr className="text-white text-xl fw-bold bg-gradient-to-r from-[#800080] via-[#ad06ad] to-[#800080]">
+        <th colSpan={2} className="py-3 px-4 sm:px-6 text-center font-semibold w-full">
+          Bank Details
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -32,13 +33,14 @@ const About_Us = () => {
         { field: "E-MAIL", detail: "subramhnyamgiriswami@gmail.com" },
       ].map((item, index) => (
         <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-[#FFFFF0]"}>
-          <td className="font-semibold py-3 px-4 sm:px-6 border-1 BorderColor">{item.field}</td>
-          <td className={`py-3 px-4 font-semibold sm:px-6 border-1 BorderColor ${item.color || ""}`}>{item.detail}</td>
+          <td className="font-semibold py-3 px-4 sm:px-6 border-1 BorderColor w-1/2">{item.field}</td>
+          <td className={`py-3 px-4 font-semibold sm:px-6 border-1 BorderColor w-1/2 ${item.color || ""}`}>{item.detail}</td>
         </tr>
       ))}
     </tbody>
   </table>
 </div>
+
 
 
       <div className="py-9 text-center sm:text-left ">
