@@ -40,7 +40,7 @@ const About_Us = () => {
               {
                 field: "IFSC",
                 detail: "SBIN0000414",
-                color: "text-purple-700",
+                color: "text-blue-700",
               },
               { field: "BRANCH", detail: "ACB KOPARGAON" },
               {
