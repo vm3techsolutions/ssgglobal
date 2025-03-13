@@ -22,32 +22,36 @@ const Donate = () => {
           </h2>
           <img src={headingIcon} className="h-12" alt="icon" />
         </div>
-        <div className="py-2 text-center sm:text-left ">
-          <p className="px-14 text-gray-600 text-sm sm:text-base md:text-lg">
-            At SSSG Global, we believe that spirituality transcends religious
-            and cultural differences. Our work is driven by the universal
-            principles of compassion, generosity, and service to humanity.
-            Through the Ashtalakshmi Puja, we aim not only to invoke material
-            and spiritual prosperity but also to inspire a deeper connection to
-            the divine, fostering peace, harmony, and gratitude in every
-            participant&apos;s life.
-            <br />
-            In a world longing for balance and meaning, SSSG Global stands as a
-            bridge between ancient wisdom and modern living, inviting people of
-            all beliefs to partake in the light of spirituality and the
-            blessings of divine grace. Together, let us preserve these sacred
-            traditions and build a future filled with abundance, harmony, and
-            hope.
-          </p>
 
-          <div className="d-flex justify-content-center align-items-center gap-2">
-            {/* <img src={headingIcon} className="h-14" alt="icon" /> */}
-            <h2 className="text-xl sm:text-xl md:text-xl fw-bold primaryColor">
-              Your Contribution Builds a Stronger Community!
-            </h2>
-            {/* <img src={headingIcon} className="h-14" alt="icon" /> */}
-          </div>
-        </div>
+        <div className="py-2 text-center sm:text-left">
+  <p className="px-14 text-gray-600 text-sm sm:text-base md:text-lg mb-4">
+    At SSSG Global, we believe that spirituality transcends religious
+    and cultural differences. Our work is driven by the universal
+    principles of compassion, generosity, and service to humanity.
+    Through the Ashtalakshmi Puja, we aim not only to invoke material
+    and spiritual prosperity but also to inspire a deeper connection to
+    the divine, fostering peace, harmony, and gratitude in every
+    participant&apos;s life.
+  </p>
+  
+  <p className="px-14 text-gray-600 text-sm sm:text-base md:text-lg">
+    In a world longing for balance and meaning, SSSG Global stands as a
+    bridge between ancient wisdom and modern living, inviting people of
+    all beliefs to partake in the light of spirituality and the
+    blessings of divine grace. Together, let us preserve these sacred
+    traditions and build a future filled with abundance, harmony, and
+    hope.
+  </p>
+
+  <div className="d-flex justify-content-center align-items-center gap-2">
+    {/* <img src={headingIcon} className="h-14" alt="icon" /> */}
+    <h2 className="text-xl sm:text-xl md:text-xl fw-bold primaryColor">
+      Your Contribution Builds a Stronger Community!
+    </h2>
+    {/* <img src={headingIcon} className="h-14" alt="icon" /> */}
+  </div>
+</div>
+
 
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start w-full gap-2 py-4 md:py-2">
           <div className="w-full md:w-1/2">
