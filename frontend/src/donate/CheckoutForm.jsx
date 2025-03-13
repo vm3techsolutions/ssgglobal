@@ -1,7 +1,7 @@
   import { useState } from "react";
   import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
   import { Container, Form, Button, Card, Alert, Row, Col } from "react-bootstrap";
-  import headingIcon from "../assets/icon.png";
+  // import headingIcon from "../assets/icon.png";
 
   const countries = [
     { code: "US", name: "United States" },
@@ -99,11 +99,11 @@
           <Col md={10}>
             <Card className="shadow-lg p-4">
               <Card.Body>
-                <div className="d-flex justify-content-center align-items-center gap-2 mb-4">
+                {/* <div className="d-flex justify-content-center align-items-center gap-2 mb-4"> */}
                   {/* <img src={headingIcon} className="h-14" alt="icon" /> */}
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">Your Contribution Builds a Stronger Community !</h2>
+                  {/* <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">Your Contribution Builds a Stronger Community !</h2> */}
                   {/* <img src={headingIcon} className="h-14" alt="icon" /> */}
-                </div>
+                {/* </div> */}
 
                 {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
                 {successMessage && <Alert variant="success">{successMessage}</Alert>}
