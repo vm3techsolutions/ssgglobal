@@ -13,33 +13,33 @@ const About_Us = () => {
       {/* Heading with Icons */}
       
 
-      <div className="overflow-x-auto flex justify-center ">
-        <table className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-2xl border border-gray-300 text-left text-sm sm:text-base ">
-          <thead>
-            <tr className="text-white bg-gradient-to-r from-[#800080] via-[#ad06ad] to-[#800080]">
-              <th className="py-3 px-4 sm:px-6 text-left font-semibold w-1/2 border border-purple-300">Field</th>
-              <th className="py-3 px-4 sm:px-6 text-left font-semibold w-1/2 border border-purple-300">Details</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              { field: "NAME", detail: "SAISHAKTI SANT SWAMI SUBRAMHNYAMGIRI MAH", color: "text-blue-700" },
-              { field: "BANK NAME", detail: "STATE BANK OF INDIA" },
-              { field: "CURRENT A/C NO.", detail: "43595237806", color: "text-red-600" },
-              { field: "IFSC", detail: "SBIN0000414", color: "text-purple-700" },
-              { field: "BRANCH", detail: "ACB KOPARGAON" },
-              { field: "BANK ADDRESS", detail: "GODAM ROAD, DIST - AHMED NAGAR, TALUKA - KOPARGAON, MAHARASHTRA - 423 001" },
-              { field: "E-MAIL", detail: "subramhnyamgiriswami@gmail.com" },
-            ].map((item, index) => (
-              <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-[#FFFFF0]"}>
-                <td className="font-semibold py-3 px-4 sm:px-6 border border-purple-300">{item.field}</td>
-                <td className={`py-3 px-4 font-semibold sm:px-6 border border-purple-300 ${item.color || ""}`}>{item.detail}</td>
-              </tr>
-            ))}
-          </tbody>
-          
-        </table>
-      </div>
+      <div className="overflow-x-auto flex justify-center">
+  <table className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-2xl text-left text-sm sm:text-base">
+    <thead>
+      <tr className="text-white bg-gradient-to-r from-[#800080] via-[#ad06ad] to-[#800080]">
+        <th className="py-3 px-4 sm:px-6 text-left font-semibold w-1/2 border-1 BorderColor">Field</th>
+        <th className="py-3 px-4 sm:px-6 text-left font-semibold w-1/2 border-1 BorderColor">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        { field: "NAME", detail: "SAISHAKTI SANT SWAMI SUBRAMHNYAMGIRI MAH", color: "text-blue-700" },
+        { field: "BANK NAME", detail: "STATE BANK OF INDIA" },
+        { field: "CURRENT A/C NO.", detail: "43595237806", color: "text-red-600" },
+        { field: "IFSC", detail: "SBIN0000414", color: "text-purple-700" },
+        { field: "BRANCH", detail: "ACB KOPARGAON" },
+        { field: "BANK ADDRESS", detail: "GODAM ROAD, DIST - AHMED NAGAR, TALUKA - KOPARGAON, MAHARASHTRA - 423 001" },
+        { field: "E-MAIL", detail: "subramhnyamgiriswami@gmail.com" },
+      ].map((item, index) => (
+        <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-[#FFFFF0]"}>
+          <td className="font-semibold py-3 px-4 sm:px-6 border-1 BorderColor">{item.field}</td>
+          <td className={`py-3 px-4 font-semibold sm:px-6 border-1 BorderColor ${item.color || ""}`}>{item.detail}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
       <div className="py-9 text-center sm:text-left ">
         <p className="mx-auto max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg">
