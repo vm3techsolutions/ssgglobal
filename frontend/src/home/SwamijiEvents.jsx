@@ -50,7 +50,7 @@ export default function SeeOurProducts() {
           <img
             src={activeImage}
             alt={activeLink}
-            className="md:w-[210vh] w-96 h- object-cover rounded-lg shadow-lg"
+            className="md:w-[210vh] w-96  object-cover rounded-lg shadow-lg"
           />
         </div>
       )}

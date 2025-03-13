@@ -24,7 +24,7 @@ const AboutUs = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">About Us</h2>
           <img src={headingIcon} className="h-12" alt="Icon" />
         </div>
-        <p className="mt-4 mx-auto max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg">
+        <p className="mt-4 text-start md:text-center mx-auto max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg">
         Swamiji’s work extends far beyond Shirdi, as he travels the world sharing the teachings and blessings of Shirdi Sai Baba. His message of universal love, selfless service, and spiritual growth resonates with people from diverse faiths and cultures, making him a beacon of hope in a fragmented world.
 
         Swamiji’s life is not just a story of miracles—it is an invitation to experience the profound impact of faith, surrender, and divine grace. Those who have sought his blessings and guidance have found not just solutions to their problems but a renewed sense of purpose and connection to the divine.
@@ -34,7 +34,7 @@ const AboutUs = () => {
       </div>
 
       {/* Responsive Image Grid */}
-      <div className="flex w-full h- overflow-hidden">
+      <div className="md:flex xl:flex 2xl:flex w-full h- overflow-hidden">
             {[
               { src: img1, color: "bg-red-500/50", text: "Swamiji", link: "/about-swamiji" },
               { src: img2, color: "bg-blue-500/50", text: "Ashtalakshmi Puja", link: "/about" },
@@ -72,7 +72,7 @@ const AboutUs = () => {
 
 
       {/* Additional Content */}
-      <p className="text-center  max-w-3xl mx-auto mb-6 mt-5 text-gray-600 text-sm sm:text-base md:text-lg">
+      <p className="md:text-center  max-w-3xl mx-auto mb-6 mt-5 text-gray-600 text-sm sm:text-base md:text-lg">
       Founded with the vision of preserving ancient Vedic traditions while embracing the modern world, SSSG Global is a beacon of spirituality, devotion, and service to humanity. Rooted in the timeless wisdom of the Vedas, our mission is to make spiritual practices accessible, meaningful, and relevant to people of all cultures, faiths, and walks of life.
       At the heart of our offerings is the Ashtalakshmi Puja, a sacred and transformative ritual that invokes the blessings of the eight divine manifestations of Goddess Lakshmi—the embodiment of wealth, prosperity, knowledge, courage, fertility, and harmony. This ritual is not just a celebration of abundance but a spiritual journey toward inner peace and holistic well-being.
       </p>

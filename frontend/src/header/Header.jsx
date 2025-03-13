@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="bg-white shadow sticky top-0 w-full z-50">
       <div className="container mx-auto px-6 lg:px-16 flex justify-between items-center py-">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2 -ml-7">
+        <Link to="/" className="flex items-center space-x-2 md:-ml-7">
           <video
             src={logo}
             alt="Logo"

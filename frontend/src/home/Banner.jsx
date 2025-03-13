@@ -16,11 +16,11 @@ const Banner = () => {
 
       {/* Content */}
       <div className="relative container mx-auto px-6 text-gray-700 ">
-        <h1 className="fw-bold text-4xl md:text-5xl max-w-sm -ml-10">
+        <h1 className="fw-bold text-4xl md:text-5xl max-w-sm md:-ml-10">
         Experience Divine Blessings with the Sacred Ashtalakshmi Puja
         </h1>
         
-        <Link to="/about-puja" className='-ml-10'>
+        <Link to="/about-puja" className='md:-ml-10'>
         <button onClick={() => window.scrollTo(0, 0)} className="mt-4 primary-btn font-bold py-2 px-6  transition">
           Know More
         </button>

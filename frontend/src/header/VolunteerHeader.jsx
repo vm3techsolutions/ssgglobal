@@ -14,10 +14,10 @@ const Header = () => {
           }, []);
 
   return (
-    <header className="bg-[#800080] text-white py-2  px-6">
+    <header className="bg-[#800080] text-white py-2  md:px-6">
       <div className="container mx-auto flex justify-between items-center flex-wrap">
         {/* Left - Contact */}
-        <div className="flex flex-wrap items-center space-x-4 -ml-5 sm:mb-0">
+        <div className="flex flex-wrap items-center md:space-x-4 -ml-3 sm:mb-0">
           <a href="tel:+91 9923607845" className="text-white hover:text-gray-400">
             Volunteer | Call Us: +91 9923607845
           </a>

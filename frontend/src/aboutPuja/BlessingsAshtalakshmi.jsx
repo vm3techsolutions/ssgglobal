@@ -68,7 +68,7 @@ const BlessingsGrid = () => {
       <div className="text-center mb-8 ">
         <div className="d-flex align-items-center justify-content-center gap-4">
           <img src={headingIcon} className="h-12" alt="Icon Left" /> {/* Left Icon */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">The Blessings of the Ashtalakshmi</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">The Blessings of the Ashtalakshmi</h2>
           <img src={headingIcon} className="h-12" alt="Icon Right" /> {/* Right Icon */}
         </div>
       </div>
@@ -77,7 +77,7 @@ const BlessingsGrid = () => {
       <Row>
         {blessings.map((blessing, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
-            <Card  data-aos="flip-left"  className="text-center border-0 " style={{ backgroundColor: "#FFFFF0", padding: "10px", height: "230px"}}>
+            <Card  data-aos="flip-left"  className="text-center border-0 " style={{ backgroundColor: "#FFFFF0", padding: "10px", height: "230px"}} >
               <Card.Img
               
                 variant="top"

@@ -9,7 +9,7 @@ const MyComponent = () => {
       <div className="md:w-4/5 md:px-10 p-3 py-5">
         <div className="flex items-center justify-center gap-4 mr-10">
           <img src={headingIcon} className="h-12" /> {/* Left Icon */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor ">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">
             Swami Subrahmanyam Giri{" "}
           </h2>
           <img src={headingIcon} className="h-12" /> {/* Right Icon */}
@@ -17,7 +17,7 @@ const MyComponent = () => {
 
 
         <div className="md:px-15 mr-5">
-          <p className="pt-4 text-gray-600 text-sm sm:text-base md:text-lg">
+          <p className="pt-4 text-gray-600 text-sm sm:text-base md:text-lg ml-6 md:ml-0" >
             Swami Subrahmanyam Giri, hailing from the serene lands of
             Kanyakumari, Tamil Nadu, is a revered Astha Yogi whose life is an
             extraordinary blend of devotion, compassion, and transformation. For
@@ -89,7 +89,7 @@ const MyComponent = () => {
       {/* Center Image */}
       <div className="md:w-2/5 relative bg-[#800080] md:h-[165vh] hidden sm:hidden lg:block">
   <img
-    className="py-20 left-0 transform -translate-x-1/6 md:h-[165vh]"
+    className="py-20 left-0 transform -translate-x-1/6 h-[165vh]"
     src={img}
     alt="Center Image"
   />

@@ -19,11 +19,11 @@ export default function WhyPerform() {
       <Row className="justify-content-center ">
         <Col md={8} sm={10} xs={12}>
           <ul className="text-start mx-auto list-disc  text-gray-600 text-sm sm:text-base md:text-lg" style={{ maxWidth: "600px", lineHeight: "1.8" }}>
-            <li className='ml-6 '>Removes financial obstacles and promotes prosperity.</li>
-            <li className='ml-6 '>Enhances spiritual growth and inner peace.</li>
-            <li className='ml-6 '>Invokes blessings for family harmony and health.</li>
-            <li className='ml-6 '>Ensures success in personal and professional endeavors.</li>
-            <li className='ml-6 '>Brings peace, positivity, and divine energy into your life.</li>
+            <li className='md:ml-6 '>Enhances spiritual growth and inner peace.</li>
+            <li className='md:ml-6 '>Invokes blessings for family harmony and health.</li>
+            <li className='md:ml-6 '>Ensures success in personal and professional endeavors.</li>
+            <li className='md:ml-6 '>Brings peace, positivity, and divine energy into your life.</li>
+            <li className='md:ml-6 '>Removes financial obstacles and promotes prosperity.</li>
           </ul>
         </Col>
       </Row>

@@ -36,7 +36,7 @@ export default function Miracles() {
     <div className="container py-8 px-4 md:py-10">
       <div className="flex flex-wrap items-center justify-center gap-4 pb-5 text-center">
         <img src={headingIcon} className="h-12  " alt="Heading Icon" />
-        <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">
           Miracles and Transformative Experiences
         </h2>
         <img src={headingIcon} className="h-12  " alt="Heading Icon" />
