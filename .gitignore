@@ -42,3 +42,5 @@ coverage/
 backend/coverage/  
 frontend/coverage/  
 public/static/
+.json
+backend/ssssg-formsubmission.json
