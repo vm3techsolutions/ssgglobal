@@ -10,7 +10,7 @@ const About_Us = () => {
   }, []);
 
   return (
-    <section className="container mx-auto sm:px-6 py-6 space-y-5">
+    <section className="container mx-auto sm:px-6 py-6 space-y-5 flex flex-col md:flex-row justify-between items-center md:items-start w-full gap-2 py-4 md:py-2">
       {/* Heading with Icons */}
 
       <div className="overflow-x-auto flex justify-center">
@@ -68,10 +68,11 @@ const About_Us = () => {
         </table>
       </div>
 
-      <div className="flex flex-col items-center justify-center text-center pt-10">
-  <h1 className="text-xl sm:text-2xl md:text-3xl fw-bold primaryColor">
+      <div className="flex flex-col items-center justify-center text-center ">
+      <h1 className=" QR fw-bold primaryColor">
     QR Code Scan & Pay
-  </h1>
+</h1>
+
   <img src={QR} className="h-96 mt-4" alt="Payment QR" />
 </div>
 

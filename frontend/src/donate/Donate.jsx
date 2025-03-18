@@ -53,12 +53,12 @@ const Donate = () => {
 </div>
 
 
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start w-full gap-2 py-4 md:py-2">
-          <div className="w-full md:w-1/2">
+        <div className="-">
+          <div className="w-full md:w-2/2">
             <ServingHumanity />
           </div>
-          <div className="w-full md:w-1/2 mt-4 md:mt-0">
-            <CheckoutForm />
+          <div className="w-full md:w-2/2 mt-4 md:mt-0">
+            {/* <CheckoutForm /> */}
           </div>
         </div>
       </Elements>

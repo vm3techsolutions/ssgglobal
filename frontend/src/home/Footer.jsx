@@ -24,12 +24,12 @@ const Footer = () => {
   return (
     <div className="mt-15">
       <footer className="bg-[#800080] text-white py-6">
-        <div className="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container mx-auto px-6 lg:px-16 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Left Section - Logo */}
           <div className="text-center lg:text-left mt-3">
              {/* Logo */}
-                    <Link to="/" className="flex items-center space-x-2">
+                    <Link to="/" className="flex flex-rows items-center space-x-2">
               <video src={logo1} alt="Logo1" className="h-44 w-auto" autoPlay loop muted>
                 
               </video>
@@ -59,7 +59,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-1 mt-2">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-1 mt-2 ">Contact Us</h3>
             
             <p className="flex items-center space-x-2"><span><IoCallOutline /> </span> <a href="tel:+91 9923607845" className="text-white hover:text-gray-400">+91 9923607845 <br/> +91 9822965257 </a></p>
             <p className="flex items-center space-x-2"><span><CiMail /></span> <a href="mailto:subramhnyamgiriswami@gmail.com" className="text-white hover:text-gray-400">subramhnyamgiriswami@gmail.com</a>

@@ -20,7 +20,7 @@ const Banner = () => {
         <Link to="/about-puja" className="md:-ml-10  ">
           <button
             onClick={() => window.scrollTo(0, 0)}
-            className="md:mt-4 primary-btn font-bold md:py-2 md:px-6 px-1 transition"
+            className="md:mt-4 primary-btn font-bold md:py-2 2xl:px-6 xl:px-6 md:px-6 px-1 transition"
           >
             Know More
           </button>
