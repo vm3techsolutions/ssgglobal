@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
 
         {/* CTA Button (Hidden on Mobile) */}
-        <div className="hidden md:block ">
+        <div className="ml-20 md:ml-0 xl:ml-0 2xl:ml-0">
           <a
             href="#ReserveForm"
             className="bg-[#800080] text-white px-3 py-2 rounded-full font-semibold hover:bg-yellow-600 transition "

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
-import { CiLinkedin } from "react-icons/ci";
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import {FaYoutubeSquare} from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <div className="mt-15">
-      <footer className="bg-[#800080] text-white py-6">
+      <footer className="bg-[#800080] text-white py-6 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-16 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Left Section - Logo */}
@@ -69,9 +69,9 @@ const Footer = () => {
             
             {/* Social Media Icons */}
             <div  className="flex justify-start space-x-4 mt-2">
-              <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><CiLinkedin className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
-              <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaYoutube className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
-              <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaInstagram className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
+              <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaLinkedin className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
+              <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaYoutubeSquare className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
+              <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaInstagramSquare className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
               <a href="#" className="text-lg hover:text-gray-300 transition-colors duration-300"><FaFacebook className="text-white mt-3 text-2xl hover:text-blue-600"/></a>
             </div>
           </div>

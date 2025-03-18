@@ -1,7 +1,7 @@
 import React from 'react';
-import { CiLinkedin } from "react-icons/ci";
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import {FaYoutubeSquare} from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -32,7 +32,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-gray-400"
           >
-            <CiLinkedin className="text-white text-xl hover:text-blue-600" />
+            <FaLinkedin className="text-white text-xl hover:text-blue-600" />
           </a>
           <a
            data-aos="flip-up"
@@ -41,7 +41,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-gray-400"
           >
-            <FaYoutube className="text-white text-xl hover:text-red-600" />
+            <FaYoutubeSquare className="text-white text-xl hover:text-red-600" />
           </a>
           <a
            data-aos="flip-up"
@@ -50,7 +50,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-white hover:text-gray-400"
           >
-            <FaInstagram className="text-white text-xl hover:text-pink-600" />
+            <FaInstagramSquare className="text-white text-xl hover:text-pink-600" />
           </a>
           <a
            data-aos="flip-up"
