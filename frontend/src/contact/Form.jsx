@@ -48,7 +48,7 @@ export default function Form() {
     <Container id="ReserveForm" className="-mt-16">
       <Card style={{ border: "0" }}>
         <div className="text-center mb-4 mt-8">
-          <div className="d-flex align-items-center justify-content-center gap-4">
+          <div className="d-flex align-items-center justify-content-center md:gap-4 sm:gap-1">
             <img src={headingIcon} className="h-12" alt="Icon Left" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
               Reserve Your Puja Now

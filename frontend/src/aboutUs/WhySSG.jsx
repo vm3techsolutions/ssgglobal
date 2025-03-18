@@ -4,7 +4,7 @@ export default function WhySSSSGGlobal() {
     return (
       <div className="max-w-3xl mx-auto py-16 pb-10 bg-white ">
           <div className="text-center mb-8">
-                      <div className="flex items-center justify-center gap-2">
+                      <div className="flex items-center justify-center md:gap-4 sm:gap-1">
                         <img src={headingIcon} className="h-12" /> {/* Left Icon */}
                         <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">Why SSSSG Global?</h2>
                         <img src={headingIcon} className="h-12" /> {/* Right Icon */}

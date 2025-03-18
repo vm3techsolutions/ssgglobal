@@ -27,7 +27,7 @@ const ContactTable = () => {
   return (
     <div className="container mx-auto py-12">
      <div className="text-center mb-8 ">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center md:gap-4 sm:gap-1">
           <img src={headingIcon} className="h-12" alt="icon" />
           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
             Overseas Contact

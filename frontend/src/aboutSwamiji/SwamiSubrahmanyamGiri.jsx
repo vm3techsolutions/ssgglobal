@@ -7,7 +7,7 @@ const MyComponent = () => {
     <div className="flex ">
       {/* Left Div */}
       <div className="md:w-4/5 md:px-10 p-3 py-5">
-        <div className="flex items-center justify-center gap-4 mr-10">
+        <div className="flex items-center justify-center md:gap-4 sm:gap-1 md:mr-10">
           <img src={headingIcon} className="h-12" /> {/* Left Icon */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">
             Swami Subrahmanyam Giri{" "}

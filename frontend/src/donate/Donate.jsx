@@ -14,9 +14,9 @@ const Donate = () => {
     <>
       <Elements stripe={stripePromise}>
         <DonateBanner />
-        <div className="d-flex justify-content-center align-items-center gap-2  pt-16">
+        <div className="d-flex justify-content-center align-items-center gap-2 md:ml-0 ml-5  pt-16">
           <img src={headingIcon} className="h-12" alt="icon" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor ">
             {" "}
             Serving Humanity Through Spirituality!
           </h2>

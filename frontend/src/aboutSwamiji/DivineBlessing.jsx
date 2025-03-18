@@ -5,7 +5,7 @@ const MiraclesAndHealing = () => {
   return (
     <div className="py-8 px- md:py-10">
 
-          <div className="flex items-center justify-center gap-4 pb-5">
+          <div className="flex items-center justify-center md:gap-4 sm:gap-1 pb-5">
                           <img src={headingIcon} className="h-12" /> {/* Left Icon */}
                           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">The Divine Blessings of Swamiji </h2>
                           <img src={headingIcon} className="h-12" /> {/* Right Icon */}

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import QR from "../assets/PaymentScanner.jpg"
 // import headingIcon from "../assets/icon.png";
 
 const About_Us = () => {
@@ -9,7 +10,7 @@ const About_Us = () => {
   }, []);
 
   return (
-    <section className="container mx-auto sm:px-6 py-6">
+    <section className="container mx-auto sm:px-6 py-6 space-y-5">
       {/* Heading with Icons */}
 
       <div className="overflow-x-auto flex justify-center">
@@ -66,6 +67,15 @@ const About_Us = () => {
           </tbody>
         </table>
       </div>
+
+      <div className="flex flex-col items-center justify-center text-center pt-10">
+  <h1 className="text-xl sm:text-2xl md:text-3xl fw-bold primaryColor">
+    QR Code Scan & Pay
+  </h1>
+  <img src={QR} className="h-96 mt-4" alt="Payment QR" />
+</div>
+
+
     </section>
   );
 };

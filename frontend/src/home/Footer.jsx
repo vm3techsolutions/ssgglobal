@@ -45,8 +45,8 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div  >
-            <h3 className="text-lg font-semibold mb-2 mt-2">Quick Links</h3>
+          <div  className="md:ml-5">
+            <h3 className="text-lg font-semibold mb-2 mt-2 ">Quick Links</h3>
             <ul className="space-y-1 text-start -ml-6">
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Home</Link></li>
 <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Us</Link></li>

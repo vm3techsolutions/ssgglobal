@@ -9,7 +9,7 @@ export default function GetInTouch() {
     <Container className="">
       <Card className="text-center p-4 "  style={{ border: "0"}}>
       <div className="text-center mb-4 pb-3">
-                <div className="d-flex align-items-center justify-content-center gap-4">
+                <div className="d-flex align-items-center justify-content-center md:gap-4 sm:gap-1">
                   <img src={headingIcon} className="h-12" alt="Icon Left" /> {/* Left Icon */}
                   <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">Get In Touch</h2>
                   <img src={headingIcon} className="h-12" alt="Icon Right" /> {/* Right Icon */}

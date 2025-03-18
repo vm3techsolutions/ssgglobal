@@ -39,7 +39,7 @@ const AboutUs = () => {
               { src: img1, color: "bg-red-500/50", text: "Swamiji", link: "/about-swamiji" },
               { src: img2, color: "bg-blue-500/50", text: "Ashtalakshmi Puja", link: "/about" },
               { src: img3, color: "bg-green-500/50", text: "Temple", link: "/about-puja" },
-              { src: img4, color: "bg-yellow-500/50", text: "Image 4", link: "/blog" },
+              { src: img4, color: "bg-yellow-500/50", text: "Supporting Social Cause", link: "/blog" },
             ].map((item, index) => (
               <div
                 key={index}
@@ -56,7 +56,7 @@ const AboutUs = () => {
                 <div
                   className={`absolute inset-0 ${item.color} flex flex-col justify-center items-center transition-opacity duration-500 ${hoveredIndex === index ? "opacity-100" : "opacity-80"}`}
                 >
-                  <h2 className="text-white text-2xl font-bold">{item.text}</h2>
+                  <h2 className="text-white text-2xl font-bold text-center">{item.text}</h2>
                   <Link to={item.link}>
                     <button
                       onClick={() => window.scrollTo(0, 0)}

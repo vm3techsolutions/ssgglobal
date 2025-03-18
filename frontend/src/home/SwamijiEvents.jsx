@@ -51,7 +51,7 @@ export default function SeeOurProducts() {
             <img
               src={activeEvent.image}
               alt={activeLink}
-              className="w-full md:h-[110vh] max-w-md object-cover rounded-lg shadow-lg"
+              className="w-full h-full max-w-md object-cover rounded-lg shadow-lg"
             />
           </div>
           
@@ -59,7 +59,10 @@ export default function SeeOurProducts() {
           <div className="w-full  md:w-1/2 flex justify-center">
             <video
               controls
-              className="w-full md:h-[110vh] max-w-md rounded-lg shadow-lg"
+              autoPlay
+              muted
+              loop
+              className="w-full h-full max-w-md rounded-lg shadow-lg"
             >
               <source src={activeEvent.video} type="video/mp4" />
               

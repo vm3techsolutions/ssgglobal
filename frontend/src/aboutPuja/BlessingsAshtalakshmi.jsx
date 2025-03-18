@@ -66,7 +66,7 @@ const BlessingsGrid = () => {
     <Container className=" container ">
       {/* Heading Section */}
       <div className="text-center mb-8 ">
-        <div className="d-flex align-items-center justify-content-center gap-4">
+        <div className="d-flex align-items-center justify-content-center md:gap-4 sm:gap-1">
           <img src={headingIcon} className="h-12" alt="Icon Left" /> {/* Left Icon */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor text-center">The Blessings of the Ashtalakshmi</h2>
           <img src={headingIcon} className="h-12" alt="Icon Right" /> {/* Right Icon */}

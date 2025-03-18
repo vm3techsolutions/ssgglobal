@@ -8,7 +8,7 @@ const LaunchingTemple = () => {
         <section className=" container">
           <div className="flex items-center justify-center gap-4">
             <img src={headingIcon} className="h-12" /> {/* Left Icon */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor ml-5 md:ml-0">
               Saishakti Sant Ashram Kasili, Kopergaon
             </h2>
             <img src={headingIcon} className="h-12" /> {/* Right Icon */}

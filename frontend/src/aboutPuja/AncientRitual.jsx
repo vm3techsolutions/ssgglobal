@@ -16,7 +16,7 @@ const About_Us = () => {
     <section className="container mx-auto px-4 sm:px-6 lg:px-12 py-14">
       {/* Heading with Icons */}
       <div className="text-center mb-10">
-        <div className="flex items-center justify-center gap-3 flex-wrap">
+        <div className="flex items-center justify-center md:gap-4 sm:gap-1 flex-wrap">
           <img src={headingIcon} className="h-12" alt="Icon Left" />
           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
             An Ancient Ritual for Modern Times
