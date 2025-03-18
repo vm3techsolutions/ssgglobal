@@ -114,12 +114,12 @@ input
   border-bottom: rgb(225, 221, 221) solid;
  }
 
- .Banner
+ /* .Banner
  {
   height: 490px;
   max-width: 100%;
   background-size: cover;
- }
+ } */
 
  .BorderColor
  {

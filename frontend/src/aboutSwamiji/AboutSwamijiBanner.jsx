@@ -4,7 +4,7 @@ import swamijibanner from "../assets/AboutSwamijiBanner2.jpg";
 const Banner = () => {
   return (
     <div
-      className="relative Banner  flex items-end"
+      className="relative bg-cover bg-center Banner flex items-center md:h-[490px] h-[170px] "
       style={{
         backgroundImage: `url(${swamijibanner})`,
       }}
