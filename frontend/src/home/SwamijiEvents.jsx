@@ -46,7 +46,7 @@ export default function SeeOurProducts() {
       <div className="flex items-center justify-center gap-4">
         <img src={headingIcon} className="h-12" alt="Icon" />
         <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">
-          Swamiji Events
+          Swamiji's Events
         </h2>
         <img src={headingIcon} className="h-12" alt="Icon" />
       </div>
@@ -97,4 +97,3 @@ export default function SeeOurProducts() {
     </div>
   );
 }
-  

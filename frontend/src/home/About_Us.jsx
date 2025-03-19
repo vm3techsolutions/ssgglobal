@@ -37,7 +37,7 @@ const AboutUs = () => {
       <div className="md:flex xl:flex 2xl:flex w-full h- overflow-hidden">
             {[
               { src: img1, color: "bg-red-500/50", text: "Swamiji", link: "/about-swamiji" },
-              { src: img2, color: "bg-blue-500/50", text: "Ashtalakshmi Puja", link: "/about" },
+              { src: img2, color: "bg-blue-500/50", text: "Ashtalakshmi Puja", link: "/about-puja" },
               { src: img3, color: "bg-green-500/50", text: "Temple", link: "/about-puja" },
               { src: img4, color: "bg-yellow-500/50", text: "Supporting Social Cause", link: "/blog" },
             ].map((item, index) => (

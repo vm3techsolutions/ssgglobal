@@ -4,7 +4,7 @@ import ImageSlider from "./ImageSlider";
 const LaunchingTemple = () => {
   return (
     <>
-    <section className="relative bg-[#f8f9fa] py-10">
+    <section id="Temple1" className="relative bg-[#f8f9fa] py-10">
         <section className=" container">
           <div className="flex items-center justify-center gap-4">
             <img src={headingIcon} className="h-12" /> {/* Left Icon */}
