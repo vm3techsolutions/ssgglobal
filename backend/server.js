@@ -111,7 +111,7 @@ app.post("/submit-form", async (req, res) => {
     });
     
     console.log("Form submitted successfully:", req.body);
-    res.status(200).json({ message: "Form submitted successfully and added to Google Sheets!" });
+    res.status(200).json({ message: "Form submitted successfully!" });
   } catch (error) {
     console.error("Google Sheets Submission Error:", error);
     res.status(500).json({ error: "Failed to submit form" });
