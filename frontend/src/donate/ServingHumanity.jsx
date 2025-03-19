@@ -14,7 +14,7 @@ const About_Us = () => {
       {/* Heading with Icons */}
 
       <div className="overflow-x-auto flex justify-center">
-        <table className="bg-white shadow-md overflow-hidden w-full max-w-2xl text-left md:ml-4 2xl:ml-18 text-sm sm:text-base">
+        <table className="bg-white shadow-md overflow-hidden w-full md:max-w-2xl max-w-sm text-left md:ml-4 2xl:ml-18 text-sm sm:text-base">
           <thead>
             <tr className="text-gray-900 text-xl fw-bold border">
               <th

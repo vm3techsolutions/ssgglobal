@@ -12,7 +12,7 @@ const Banner = () => {
             {/* Content */}
             <div className="relative container mx-auto py-4  text-white flex">
                 <div className="max-w-full  ">
-                    <h1 className="hidden sm:block text-center md:ml-44 fw-bold text-4xl md:text-5xl  ">
+                    <h1 className="BlogHeading     ">
                     Explore Divine Knowledge and Spiritual Insights                    </h1>
                 </div>
             </div>

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import headingIcon from "../assets/icon.png";
-
 import img3 from "../assets/UpcomingBanner.png";
 import video1 from "../assets/UpcomingVideo.mp4";
 
 export default function SeeOurProducts() {
   const [activeLink, setActiveLink] = useState("Upcoming Events");
+  const videoRef = useRef(null);
 
   const links = [
     // { name: "Past Events", image: img1, video: video1 },
@@ -14,6 +14,31 @@ export default function SeeOurProducts() {
   ];
 
   const activeEvent = links.find((link) => link.name === activeLink);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current.play();
+          videoRef.current.muted = false;
+        } else {
+          videoRef.current.pause();
+          videoRef.current.muted = true;
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col items-center pt-20">
@@ -54,18 +79,17 @@ export default function SeeOurProducts() {
               className="w-full h-full max-w-md object-cover rounded-lg shadow-lg"
             />
           </div>
-          
+
           {/* Right Side - Video */}
-          <div className="w-full  md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex justify-center">
             <video
+              ref={videoRef}
               controls
               autoPlay
-              muted
               loop
               className="w-full h-full max-w-md rounded-lg shadow-lg"
             >
               <source src={activeEvent.video} type="video/mp4" />
-              
             </video>
           </div>
         </div>
@@ -73,3 +97,4 @@ export default function SeeOurProducts() {
     </div>
   );
 }
+  

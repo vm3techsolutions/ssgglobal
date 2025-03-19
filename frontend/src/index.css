@@ -173,4 +173,120 @@ input
   font-size: x-large;
  }
  
+ .heading {
+  font-weight: bold;
+  max-width: 100rem; /* Equivalent to max-w-md */
+  text-align: center; /* Default alignment */
+  width: 260px;
 
+  font-size: 20px; /* Mobile view */
+}
+
+/* Medium devices (md) */
+@media (min-width: 768px) {
+  .heading {
+      font-size: 40px;
+      text-align: center;
+      width: 450px;
+      
+  }
+}
+
+/* Extra-large devices (2xl) */
+@media (min-width: 1536px) {
+  .heading {
+      font-size: 48px;
+      text-align: center;
+      width: 480px;
+  }
+}
+
+.BlogHeading {
+  font-weight: bold;
+  max-width: 100rem; /* Equivalent to max-w-md */
+  text-align: center; /* Default alignment */
+  width: 340px;
+  margin-left: 26px;
+
+  font-size: 20px; /* Mobile view */
+}
+
+/* Medium devices (md) */
+@media (min-width: 768px) {
+  .BlogHeading {
+      font-size: 40px;
+      text-align: center;
+      width: 850px;
+      margin-left: 110px;
+      
+  }
+}
+
+/* Extra-large devices (2xl) */
+@media (min-width: 1536px) {
+  .BlogHeading {
+      font-size: 48px;
+      text-align: center;
+      width: 950px;
+      margin-left: 130px;
+  }
+}
+
+.GalleryHeading {
+  font-weight: bold;
+  max-width: 100rem; /* Equivalent to max-w-md */
+  text-align: center; /* Default alignment */
+  width: 340px;
+  margin-left: 26px;
+  margin-bottom: 100px;
+
+  font-size: 20px; /* Mobile view */
+}
+
+/* Medium devices (md) */
+@media (min-width: 768px) {
+  .GalleryHeading {
+    font-size: 40px;
+    text-align: center;
+    width: 450px;
+    margin-left: 0px;
+      
+  }
+}
+
+/* Extra-large devices (2xl) */
+@media (min-width: 1536px) {
+  .GalleryHeading {
+    font-size: 48px;
+    text-align: center;
+    width: 480px;
+  }
+}
+
+.Donateheading {
+  font-weight: bold;
+  max-width: 100rem; /* Equivalent to max-w-md */
+  text-align: center; /* Default alignment */
+  width: 260px;
+
+  font-size: 20px; /* Mobile view */
+}
+
+/* Medium devices (md) */
+@media (min-width: 768px) {
+  .Donateheading {
+      font-size: 50px;
+      text-align: center;
+      width: 450px;
+      
+  }
+}
+
+/* Extra-large devices (2xl) */
+@media (min-width: 1536px) {
+  .Donateheading {
+      font-size: 48px;
+      text-align: center;
+      width: 480px;
+  }
+}

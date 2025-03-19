@@ -15,7 +15,7 @@ const Banner = () => {
             {/* Content */}
             <div className="absolute container mx-auto px-6 text-white flex justify-end  ">
                 <div className="max-w-md md:mr-40">
-                    <h1 className="hidden sm:block  fw-bold text-4xl md:text-5xl max-w-md ml-4 md:ml-0">
+                    <h1 className="heading ">
                         Discover the sacred ritual that blesses every aspect of your life with the divine grace of the eight forms of Goddess Lakshmi!
                     </h1>
                 </div>

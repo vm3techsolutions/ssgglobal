@@ -66,7 +66,7 @@ const ContactTable = () => {
 
 
 <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden ">
+        <table className="min-w-full max-w-sm bg-white shadow-md rounded-lg overflow-hidden ">
           
        <thead>
        <tr className="text-white bg-gradient-to-r from-[#800080] via-[#ad06ad] to-[#800080]">
