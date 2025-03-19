@@ -14,6 +14,43 @@ export default function Form() {
   });
 
   const [responseMessage, setResponseMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  // Validation function
+  const validateForm = () => {
+    let newErrors = {};
+    const nameRegex = /^[A-Za-z\s]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    // Ensure the preferred date is from the next day onward
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    
+    const selectedDate = new Date(formData.preferredDate);
+    selectedDate.setHours(0, 0, 0, 0);
+
+    if (!nameRegex.test(formData.fullname)) {
+      newErrors.fullname = "Full Name should contain only letters and spaces.";
+    }
+
+    if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "Phone number must be exactly 10 digits.";
+    }
+
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    if (formData.preferredDate && selectedDate < tomorrow) {
+      newErrors.preferredDate = "Preferred Date should be from tomorrow onwards.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -23,6 +60,7 @@ export default function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
 
     try {
       const response = await axios.post(
@@ -82,6 +120,8 @@ export default function Form() {
                 className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 required
               />
+              {errors.fullname && <p className="text-red-500 text-xs">{errors.fullname}</p>}
+
             </div>
 
             <div>
@@ -96,6 +136,7 @@ export default function Form() {
                 className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 required
               />
+              {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
             </div>
           </div>
 
@@ -113,6 +154,7 @@ export default function Form() {
                 className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 required
               />
+              {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
             </div>
 
             <div>
@@ -126,7 +168,9 @@ export default function Form() {
                 onChange={handleChange}
                 className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 required
+                min={new Date().toISOString().split("T")[0]} // Ensure it's at least tomorrow
               />
+              {errors.preferredDate && <p className="text-red-500 text-xs">{errors.preferredDate}</p>}
             </div>
           </div>
 
