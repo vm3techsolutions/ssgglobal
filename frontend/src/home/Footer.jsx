@@ -52,6 +52,7 @@ const Footer = () => {
 <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Us</Link></li>
 <li><Link to="/about-puja" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">About Puja</Link></li>
 <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Blog</Link></li>
+<li><Link to="/gallery" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Gallery</Link></li>
 <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Contact</Link></li>
 <li><Link to="/donate" onClick={() => window.scrollTo(0, 0)}  className="text-white hover:text-blue-900 transition-colors duration-300">Donate</Link></li>
 

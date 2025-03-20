@@ -11,7 +11,7 @@ const Banner = () => {
       }}
     >
       {/* Content */}
-      <div className="relative container mx-auto px-6 text-gray-700">
+      <div className=" hidden sm:block relative container mx-auto px-6 text-gray-700">
         {/* Hide text on mobile */}
         <h1 className="hidden sm:block fw-bold text-xs sm:text-sm md:text-5xl max-w-sm md:-ml-10">
           Experience Divine Blessings with the Sacred Ashtalakshmi Puja
