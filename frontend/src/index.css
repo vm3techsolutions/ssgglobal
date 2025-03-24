@@ -35,6 +35,7 @@ a{
     color: #fff;
     background-color: #800080;
     
+    
 }
 .primary-btn:hover {
   background-color: orange;
@@ -289,4 +290,75 @@ input
       text-align: center;
       width: 480px;
   }
+}
+
+.SocialHeading {
+  font-weight: bold;
+  max-width: 15rem; /* Equivalent to max-w-md */
+  text-align: start; /* Default alignment */
+  width: 340px;
+  margin-left: 60px;
+  margin-top: 20px;
+
+  font-size: 20px; /* Mobile view */
+}
+
+/* Medium devices (md) */
+@media (min-width: 768px) {
+  .SocialHeading {
+      font-size: 40px;
+      max-width: 100rem;
+      text-align: start;
+      width: 850px;
+      margin-top: 100px;
+      margin-left: 60px;
+     
+     
+  }
+}
+
+/* Extra-large devices (2xl) */
+@media (min-width: 1536px) {
+  .SocialHeading {
+      font-size: 48px;
+      text-align: start;
+      width: 950px;
+      margin-top: 120px;
+      margin-left: 60px;
+  }
+}
+
+.tab {
+  background-color: #FFFFF0;
+  border-radius: 0.5rem;
+  width: 21rem; /* Equivalent to w-84 */
+  height: 16rem; /* Equivalent to h-64 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem; /* Equivalent to p-2 */
+  position: relative; /* Needed for the triangle to position correctly */
+  transition: transform 0.3s;
+}
+
+.tab:hover {
+  transform: scale(1.05);
+}
+
+.tab.active {
+  box-shadow: 0 0 0 4px #800080; /* Purple border */
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 10px solid #800080; /* Purple color for the triangle */
 }

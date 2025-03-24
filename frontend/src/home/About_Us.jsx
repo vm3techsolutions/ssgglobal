@@ -6,7 +6,7 @@ import headingIcon from "../assets/icon.png";
 import img1 from "../assets/WhatsApp Image 2025-01-21 at 11.07.58.jpeg";
 import img2 from "../assets/about3.png";
 import img3 from "../assets/temple.jpg";
-import img4 from "../assets/thumbnail_large.png";
+import img4 from "../assets/AboutSocialCause.webp";
 
 const AboutUs = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -39,7 +39,7 @@ const AboutUs = () => {
               { src: img1, color: "bg-red-500/50", text: "Swamiji", link: "/about-swamiji" },
               { src: img2, color: "bg-blue-500/50", text: "Ashtalakshmi Puja", link: "/about-puja" },
               { src: img3, color: "bg-green-500/50", text: "Temple", link: "/about-puja" },
-              { src: img4, color: "bg-yellow-500/50", text: "Supporting Social Cause", link: "/blog" },
+              { src: img4, color: "bg-yellow-500/50", text: "Supporting Social Cause", link: "/social-cause" },
             ].map((item, index) => (
               <div
                 key={index}

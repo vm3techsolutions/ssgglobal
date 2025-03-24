@@ -14,6 +14,7 @@ import BlogDetails from './blog/BlogDetails';
 import Gallery from './gallery/Gallery';
 import Donate from './donate/Donate';
 import About_Swamiji from './aboutSwamiji/About_Swamiji';
+import SocialCause from './Social Cause/SocialCause';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/social-cause" element={<SocialCause/>} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
 
       </Routes> 
