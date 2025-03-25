@@ -6,7 +6,7 @@ import headingIcon from "../assets/icon.png";
 import img1 from "../assets/WhatsApp Image 2025-01-21 at 11.07.58.jpeg";
 import img2 from "../assets/about3.png";
 import img3 from "../assets/temple.jpg";
-import img4 from "../assets/AboutSocialCause.webp";
+import img4 from "../assets/SocialCauseimg.png";
 
 const AboutUs = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -24,7 +24,7 @@ const AboutUs = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl fw-bold primaryColor">About Us</h2>
           <img src={headingIcon} className="h-12" alt="Icon" />
         </div>
-        <p className="mt-4 text-start md:text-center mx-auto max-w-3xl text-gray-600 text-sm sm:text-base md:text-lg">
+        <p className="md:text-center  max-w-3xl mx-auto mb-6 mt-5 text-gray-600 text-sm sm:text-base md:text-lg">
         Swamiji’s work extends far beyond Shirdi, as he travels the world sharing the teachings and blessings of Shirdi Sai Baba. His message of universal love, selfless service, and spiritual growth resonates with people from diverse faiths and cultures, making him a beacon of hope in a fragmented world.
 
         Swamiji’s life is not just a story of miracles—it is an invitation to experience the profound impact of faith, surrender, and divine grace. Those who have sought his blessings and guidance have found not just solutions to their problems but a renewed sense of purpose and connection to the divine.
