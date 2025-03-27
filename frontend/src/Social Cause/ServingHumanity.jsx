@@ -1,15 +1,100 @@
 import React, { useState } from "react";
 import headingIcon from "../assets/icon.png";
-import Social1 from "../assets/Social1.jpg";
-import Social2 from "../assets/Social2.jpg";
-import Social3 from "../assets/Social3.jpg";
+import Social1 from "../assets/socialTemple.png";
+import Social2 from "../assets/socialCow.png";
+import Social3 from "../assets/socialAnnathan.png";
+import Social4 from "../assets/socialSick.png";
+import Social5 from "../assets/socialFinancial.png";
 
 const SocialCauses = () => {
   const [activeTab, setActiveTab] = useState(2);
 
-  const handleTabClick = (tabIndex) => {
-    setActiveTab(tabIndex);
-  };
+  // Array to store data for tabs
+  const tabs = [
+    {
+      id: 1,
+      title: "Construction of a Temple",
+      image: Social1,
+      details: (
+        <div className="text-start">
+          <h2 className="primaryColor fw-bold mb-4  text-center">Construction of a Temple</h2>
+          <p className="  max-w-3xl mx-auto mb-6 mt-2 text-gray-600 text-sm sm:text-base md:text-lg">
+          Under the divine guidance of Swamiji, 17 temples dedicated to Sai Nath have already been built, and the 18th temple and Ashram are currently under construction at Kopergaon. This sacred mission will continue as Swamiji envisions building more temples worldwide to spread spirituality and serve devotees. The temple at Kopergaon will serve as a place of worship, spiritual guidance, and healing. The Kalasa of Sai Baba in this temple stands at 141 feet, making it the tallest in the world for a Baba temple. The trust remains committed to expanding its spiritual mission to reach more devotees globally.
+
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 2,
+      title: "Feeding and Caring for Cows (Gaushala)",
+      image: Social2,
+      details: (
+        <div className="text-start">
+          <h2 className="primaryColor fw-bold mb-4 text-center">
+          Feeding and Caring for Cows (Gaushala)
+          </h2>
+          
+          <p className="  max-w-3xl mx-auto mb-6 mt-2 text-gray-600 text-sm sm:text-base md:text-lg">
+          Cows are considered sacred and a symbol of purity and prosperity. Our Gaushala provides shelter, food, and medical care to injured, abandoned, and malnourished cows. We ensure that these sacred beings receive the love and care they deserve. Additionally, we promote sustainable practices by using cow dung and urine for organic farming, producing eco-friendly products that benefit the environment and community.
+          </p>
+          <h5 className="text-start fw-bold max-w-3xl mx-auto">How you can help:</h5>
+<ul className=" list-disc  max-w-2xl -ml-5" >
+  <li className="fw-bold">Adopt a cow and support its well-being through monthly contributions.</li>
+  <li className="fw-bold">Donate for food and medical care to help sustain their nourishment and treatment.</li>
+  <li className="fw-bold">Volunteer to help in feeding, cleaning, and maintaining the Gaushala, ensuring a clean and safe space for the cows.</li>
+</ul>
+
+
+        </div>
+      ),
+    },
+    {
+      id: 3,
+      title: "Annathan (Free Food for the Needy)",
+      image: Social3,
+      details: (
+        <div className="text-start">
+          <h2 className="primaryColor fw-bold mb-4 text-center">Annathan (Free Food for the Needy)</h2>
+          <p className="  max-w-3xl mx-auto mb-6 mt-2 text-gray-600 text-sm sm:text-base md:text-lg">
+           
+We believe that no one should go hungry. Our Annathan program serves free meals to the underprivileged, ensuring that everyone who visits the temple receives nourishment and care. A dedicated dining hall is under construction to accommodate more people and serve food efficiently. This initiative helps thousands of people daily, fostering a sense of community and kindness.
+
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      title: "Healing the Sick",
+      image: Social4,
+      details: (
+        <div className="text-start">
+          <h2 className="primaryColor fw-bold mb-4 text-center">Healing the Sick        </h2>
+          <p className="  max-w-3xl mx-auto mb-6 mt-2 text-gray-600 text-sm sm:text-base md:text-lg">
+           
+We provide medical assistance and support to those in need, helping the sick recover with dignity. This includes financial aid for treatments, access to healthcare, and wellness programs that promote physical and spiritual healing. Special healing prayers and rituals are conducted to offer divine blessings and comfort to those suffering from illnesses. Our aim is to ensure that no one is left without care due to financial hardships.
+
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 5,
+      title: "Financial Assistance to the Underprivileged",
+      image: Social5,
+      details: (
+        <div className="text-start">
+          <h2 className="primaryColor fw-bold mb-4 text-center">Financial Assistance to the Underprivileged
+          </h2>
+          <p className="  max-w-3xl mx-auto mb-6 mt-2 text-gray-600 text-sm sm:text-base md:text-lg">
+          We extend support to families struggling with financial hardships. This includes providing educational assistance, basic necessities, and emergency aid to ensure a better quality of life for the underprivileged. Many individuals and families have benefitted from our financial aid programs, allowing them to rebuild their lives and find hope in difficult times.
+
+          </p>
+        </div>
+      ),
+    },
+  ];
 
   return (
     <div className="p-4 flex flex-col items-center min-h-screen">
@@ -22,136 +107,35 @@ const SocialCauses = () => {
         <img src={headingIcon} className="h-12" alt="Icon" />
       </div>
 
+      
+
       {/* Tabs Section */}
-      <div className="flex flex-col md:flex-row gap-4 items-center mb-14">
-        {/* Tab 1 */}
-        <div
-          onClick={() => handleTabClick(1)}
-          className={`tab ${activeTab === 1 ? "active" : ""}`}
-        >
-          <img
-            src={Social1}
-            alt="Social Cause 1"
-            className={`w-full object-cover rounded-md transition-all ${
-              activeTab === 1 ? "h-48" : "h-36"
-            }`} // Increased height for active tab
-          />
-          {activeTab !== 1 && (
-            <h3 className="primaryColor fw-bold mt-2">Social Cause 1</h3>
-          )}
-        </div>
-
-        {/* Tab 2 */}
-        <div
-          onClick={() => handleTabClick(2)}
-          className={`tab ${activeTab === 2 ? "active" : ""}`}
-        >
-          <img
-            src={Social2}
-            alt="Social Cause 2"
-            className={`w-full object-cover rounded-md transition-all ${
-              activeTab === 2 ? "h-48" : "h-36"
-            }`} // Increased height for active tab
-          />
-          {activeTab !== 2 && (
-            <h3 className="primaryColor fw-bold mt-2">Saving and Serving Cows </h3>
-          )}
-        </div>
-
-        {/* Tab 3 */}
-        <div
-          onClick={() => handleTabClick(3)}
-          className={`tab ${activeTab === 3 ? "active" : ""}`}
-        >
-          <img
-            src={Social3}
-            alt="Social Cause 3"
-            className={`w-full object-cover rounded-md transition-all ${
-              activeTab === 3 ? "h-48" : "h-36"
-            }`} // Increased height for active tab
-          />
-          {activeTab !== 3 && (
-            <h3 className="primaryColor fw-bold mt-2">Social Cause 3</h3>
-          )}
-        </div>
+      <div className="flex flex-wrap justify-center gap-4 mb-14">
+        {tabs.map((tab) => (
+          <div
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`tab cursor-pointer ${
+              activeTab === tab.id ? "active" : ""
+            }`}
+          >
+            <img
+              src={tab.image}
+              alt={tab.title}
+              className={`w-full object-cover rounded-md transition-all ${
+                activeTab === tab.id ? "h-48" : "h-36"
+              }`}
+            />
+            {activeTab !== tab.id && (
+              <h3 className="primaryColor fw-bold mt-2">{tab.title}</h3>
+            )}
+          </div>
+        ))}
       </div>
 
       {/* Active Tab Content Section */}
       <div className="bg-[#FFFFF0] rounded-lg p-6 max-w-5xl text-center">
-        {activeTab === 1 && (
-          <div>
-            <h2 className="primaryColor fw-bold mb-4">Social Cause 1</h2>
-            <p>
-              Details about Social Cause 1 go here. This may include rescue
-              missions, services, or awareness campaigns.
-            </p>
-          </div>
-        )}
-        {activeTab === 2 && (
-          <div className="text-start">
-            <h2 className="primaryColor fw-bold mb-4 text-center">
-              Saving and Serving Cows: A Sacred Duty
-            </h2>
-            <h5 className="text-start fw-bold">
-              Honoring the Divine Gift of Gaumata
-            </h5>
-            <p>
-              Cows have been revered for centuries as a symbol of purity,
-              abundance, and compassion. At our Gaushala (Cow Shelter), we are
-              committed to protecting, nurturing, and serving these sacred
-              beings who give so much to humanity.
-            </p>
-            <h5 className="text-start fw-bold">Our Mission: Protect, Care & Serve</h5>
-            <ul className="list-disc -ml-4">
-              <li>
-                <strong>Rescue & Rehabilitation –</strong> Saving injured,
-                abandoned, and malnourished cows.
-              </li>
-              <li>
-                <strong>Shelter & Healthcare – </strong>Providing safe havens
-                with nutritious food, medical care, and love.
-              </li>
-              <li>
-                <strong>Promoting Ahimsa & Awareness – </strong>Encouraging
-                people to support and protect cows.
-              </li>
-              <li>
-                <strong>Organic Sustainability –</strong> Utilizing cow dung
-                and cow urine for eco-friendly farming and products.
-              </li>
-            </ul>
-            <h5 className="text-start fw-bold">
-              How You Can Support This Noble Cause
-            </h5>
-            <ul className="list-disc -ml-4">
-              <li>
-                <strong>Adopt a Cow – </strong> Support the well-being of a
-                rescued cow through monthly contributions.
-              </li>
-              <li>
-                <strong>Donate for Food & Medical Care – </strong> Help provide
-                nutritious fodder, medicines, and shelter.
-              </li>
-              <li>
-                <strong>Volunteer at the Gaushala –</strong>Join hands in
-                feeding, cleaning, and taking care of the cows.
-              </li>
-              <li>
-                <strong>Spread Awareness –</strong> Educate others about the
-                importance of cow protection and ethical dairy practices.
-              </li>
-            </ul>
-          </div>
-        )}
-        {activeTab === 3 && (
-          <div>
-            <h2 className="primaryColor fw-bold mb-4">Social Cause 3</h2>
-            <p>
-              Details about Social Cause 3 go here. Include any special missions
-              or partnerships.
-            </p>
-          </div>
-        )}
+        {tabs.find((tab) => tab.id === activeTab)?.details}
       </div>
     </div>
   );
