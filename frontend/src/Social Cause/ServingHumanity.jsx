@@ -37,7 +37,7 @@ const SocialCauses = () => {
             }`} // Increased height for active tab
           />
           {activeTab !== 1 && (
-            <h2 className="primaryColor fw-bold mt-2">Social Cause 1</h2>
+            <h3 className="primaryColor fw-bold mt-2">Social Cause 1</h3>
           )}
         </div>
 
@@ -54,7 +54,7 @@ const SocialCauses = () => {
             }`} // Increased height for active tab
           />
           {activeTab !== 2 && (
-            <h2 className="primaryColor fw-bold mt-2">Social Cause 2</h2>
+            <h3 className="primaryColor fw-bold mt-2">Saving and Serving Cows </h3>
           )}
         </div>
 
@@ -71,7 +71,7 @@ const SocialCauses = () => {
             }`} // Increased height for active tab
           />
           {activeTab !== 3 && (
-            <h2 className="primaryColor fw-bold mt-2">Social Cause 3</h2>
+            <h3 className="primaryColor fw-bold mt-2">Social Cause 3</h3>
           )}
         </div>
       </div>
