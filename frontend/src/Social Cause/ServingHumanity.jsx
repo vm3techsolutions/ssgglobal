@@ -9,6 +9,7 @@ import Social5 from "../assets/socialFinancial.png";
 const SocialCauses = () => {
   const [activeTab, setActiveTab] = useState(2);
 
+  
   // Array to store data for tabs
   const tabs = [
     {
